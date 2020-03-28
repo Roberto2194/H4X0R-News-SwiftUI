@@ -13,6 +13,10 @@
 		EE3F921B242F5532009DA16D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE3F921A242F5532009DA16D /* Assets.xcassets */; };
 		EE3F921E242F5532009DA16D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE3F921D242F5532009DA16D /* Preview Assets.xcassets */; };
 		EE3F9221242F5532009DA16D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE3F921F242F5532009DA16D /* LaunchScreen.storyboard */; };
+		EE3F922A242F59B9009DA16D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3F9229242F59B9009DA16D /* NetworkManager.swift */; };
+		EE3F922C242F5AE5009DA16D /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3F922B242F5AE5009DA16D /* PostData.swift */; };
+		EE3F922F242F627D009DA16D /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3F922E242F627D009DA16D /* DetailView.swift */; };
+		EE3F9231242F653E009DA16D /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3F9230242F653E009DA16D /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,11 @@
 		EE3F921D242F5532009DA16D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EE3F9220242F5532009DA16D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE3F9222242F5532009DA16D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE3F9229242F59B9009DA16D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		EE3F922B242F5AE5009DA16D /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		EE3F922E242F627D009DA16D /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		EE3F9230242F653E009DA16D /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		EE3F9232242F6700009DA16D /* H4X0R News - SwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "H4X0R News - SwiftUI.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +65,11 @@
 		EE3F9213242F5532009DA16D /* H4X0R News - SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				EE3F9232242F6700009DA16D /* H4X0R News - SwiftUI.entitlements */,
 				EE3F9214242F5532009DA16D /* AppDelegate.swift */,
 				EE3F9216242F5532009DA16D /* SceneDelegate.swift */,
-				EE3F9218242F5532009DA16D /* ContentView.swift */,
+				EE3F922D242F6264009DA16D /* Views */,
+				EE3F9228242F5988009DA16D /* Models */,
 				EE3F921A242F5532009DA16D /* Assets.xcassets */,
 				EE3F921F242F5532009DA16D /* LaunchScreen.storyboard */,
 				EE3F9222242F5532009DA16D /* Info.plist */,
@@ -73,6 +84,25 @@
 				EE3F921D242F5532009DA16D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EE3F9228242F5988009DA16D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EE3F9229242F59B9009DA16D /* NetworkManager.swift */,
+				EE3F922B242F5AE5009DA16D /* PostData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EE3F922D242F6264009DA16D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EE3F9218242F5532009DA16D /* ContentView.swift */,
+				EE3F922E242F627D009DA16D /* DetailView.swift */,
+				EE3F9230242F653E009DA16D /* WebView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +176,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE3F922C242F5AE5009DA16D /* PostData.swift in Sources */,
+				EE3F922F242F627D009DA16D /* DetailView.swift in Sources */,
+				EE3F922A242F59B9009DA16D /* NetworkManager.swift in Sources */,
 				EE3F9215242F5532009DA16D /* AppDelegate.swift in Sources */,
 				EE3F9217242F5532009DA16D /* SceneDelegate.swift in Sources */,
 				EE3F9219242F5532009DA16D /* ContentView.swift in Sources */,
+				EE3F9231242F653E009DA16D /* WebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +318,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "H4X0R News - SwiftUI/H4X0R News - SwiftUI.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"H4X0R News - SwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = JY68QCXDV6;
 				ENABLE_PREVIEWS = YES;
@@ -295,6 +331,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.robertoliccardo.H4X0R-News---SwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,7 +341,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "H4X0R News - SwiftUI/H4X0R News - SwiftUI.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"H4X0R News - SwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = JY68QCXDV6;
 				ENABLE_PREVIEWS = YES;
@@ -315,6 +354,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.robertoliccardo.H4X0R-News---SwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
